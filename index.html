@@ -1,16 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ajax之asp/php小实例0510</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sstruggle's website</title>
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- 自己的样式表 -->
+    <link rel="stylesheet" type="text/css" href="./css/11.css">
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!-- [if lt IE 9]
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
+
+    <!-- jquery要放在js前面 -->
+    <script src="./js/jquery-3.js"></script>
+    <script src="./js/myweb.js" type="text/javascript"></script>
 </head>
 <body>
-<h3>请在下面的输入框中键入字母（A-Z）：</h3>
-<form action="">
-    姓氏：<input type="text" id="txt1" onkeyup="showHint(this.value)">
-</form>
-<p>建议：<span id="txtHint"></span></p>
-<a href="https://htmlpreview.github.io/?https://github.com/sstruggle/qpractice/master/1226.html"><input type="button" value="点此预览"></a>
+    <div class="container jumbotron header">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">认识我
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#myself">我的介绍</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.wtc.edu.cn/">我的学校</a></li>
+            </ul>
+        </div>
+       <!--  关于我 -->
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">关于我
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#myab">我的作品</a></li>
+                 <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#mywork">我的工作经历</a></li>
+            </ul>
+        </div>
+        <!-- 联系我 -->
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">联系我
+                <span class="caret"></span>
+        </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#myphone">我的联系方式</a></li>
+            </ul>
+        </div>
+        <img src="./img/logo.jpg" alt="logo" class="img-responsive mylogo">
+    </div>
+
+     <!-- ps作品轮播图 -->
+    <div class="container jumbotron psimg" id="psimg">
+        <div class="psimgshow"><img src="./img/zp1.png" alt="ps作品1"></div>
+        <div><img src="./img/zp2.png" alt="ps作品1"></div>
+        <div><img src="./img/zp3.png" alt="ps作品1"></div>
+        <div><img src="./img/zp4.png" alt="ps作品1"></div>
+    </div>
+
+    <!--  自我介绍部分 -->
+    <div class="container jumbotron">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="my">
+                            <p><span class="glyphicon glyphicon-user myrh"></span><span><a name="myself"></a>姓名：沈婷婷</span><span style="margin-left: 20px;">年龄：23</span></p>
+                            <p><span  class="glyphicon glyphicon-star myrh"></span><span>专业：计算机网络技术</span></p>
+                            <p><span  class="glyphicon glyphicon-search myrh"></span><span><a name="myphone"></a>联系方式：1300xxxxx</span></p>
+                            <p><span class="glyphicon glyphicon-envelope myrh"></span><span>邮箱：26xxxxxx@qq.com</span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="work">
+                            <p><span  class="myrh"></span><span><a name="mywork"></a>前程无忧武汉分公司</span></p>
+                            <p><span class="glyphicon glyphicon-pencil myrh"></span><span>主要职责：</br>1，负责客户招聘网页的设计，改版和更新；</br>2，定期与客户联系，对客户网站进行后期维护；</br>3，根据客户需求，对增值服务产品进行设计制作；</br>4，掌握ps，熟悉html+css布局；</span></p>
+                            <p><span  class="myrh"></span><span>广州诚旭电子科技有限公司</span><span style="margin-left: 20px;">岗位：数据库维护人员</span></p>
+                            <p><span class="glyphicon glyphicon-pencil myrh"></span><span  class="jianjie">主要职责：</br>1，数据库数据维护，使用sql语句对用户上传的数据进行增删改查的操作；</br>2，记录用户使用app过程中出现的问题，及时与开发人员反馈，以及进一步的跟进；</br>3，结合sql语句对app功能进行测试；</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 作品展示页面 -->
+    <div class="container jumbotron" id="nextdiv">
+        <div class="row">
+            <!-- 图片样式 -->
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="imgalp"></div>
+                        <div class="imgpos"><a name="myab"></a><img src="./img/zp1.png" alt="zp1"  class="img-responsive"></div>
+                    </div>
+                    <!-- 按钮样式 -->
+                    <div class="col-md-12"><a href="" class="btn btn-primary btn-default">点此预览</a></div>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="imgalp"></div>
+                        <div class="imgpos"><img src="./img/zp2.png" alt="zp2"  class="img-responsive"></div>
+                    </div>
+                    <div class="col-md-12"><a href="" class="btn btn-primary btn-default">点此预览</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- 图片样式 -->
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="imgalp"></div>
+                        <div class="imgpos"><img src="./img/zp3.png" alt="zp3"  class="img-responsive"></div>
+                    </div>
+                    <!-- 按钮样式 -->
+                    <div class="col-md-12"><a href="https://htmlpreview.github.io/?https://github.com/sstruggle/qpractice/master/1226.html" class="btn btn-primary btn-default">点此预览</a></div>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="imgalp"></div>
+                        <div class="imgpos"><img src="./img/zp4.png" alt="zp4"  class="img-responsive"></div>
+                    </div>
+                    <div class="col-md-12"><a href="https://htmlpreview.github.io/?https://github.com/sstruggle/task/master/bs/bs.html" class="btn btn-primary btn-default">点此预览</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <a href="javascript:;" class="btn btn-default nexta">下一页</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二页 -->
+    <div id="prediv" class="container jumbotron" style="display: none;">
+        <a name="myab"></a>
+        <div class="row">
+            <!-- 图片样式 -->
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="imgalp"></div>
+                        <div class="imgpos"><img src="./img/zp3.png" alt="zp3"  class="img-responsive"></div>
+                    </div>
+                    <!-- 按钮样式 -->
+                    <div class="col-md-12"><a href="" class="btn btn-primary btn-default">点此预览</a></div>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="imgalp"></div>
+                        <div class="imgpos"><img src="./img/zp4.png" alt="zp4"  class="img-responsive"></div>
+                    </div>
+                    <div class="col-md-12"><a href="" class="btn btn-primary btn-default">点此预览</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- 图片样式 -->
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="imgalp"></div>
+                        <div class="imgpos"><img src="./img/zp3.png" alt="zp3"  class="img-responsive"></div>
+                    </div>
+                    <!-- 按钮样式 -->
+                    <div class="col-md-12"><a href="https://htmlpreview.github.io/?https://github.com/sstruggle/qpractice/master/1226.html" class="btn btn-primary btn-default">点此预览</a></div>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="imgalp"></div>
+                        <div class="imgpos"><img src="./img/zp4.png" alt="zp4"  class="img-responsive"></div>
+                    </div>
+                    <div class="col-md-12"><a href="https://htmlpreview.github.io/?https://github.com/sstruggle/task/master/bs/bs.html" class="btn btn-primary btn-default">点此预览</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <a href="javascript:;" class="btn-default btn prea">上一页</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="container jumbotron footer">
+        <div class="foottext">
+            <span style="padding-right: 20px;">版权归sstruggle所有</span>
+        <span>友情链接：
+            <a href="https://www.baidu.com/">百度</a>
+            | <a href="https://github.com/">github</a>
+            | <a href="index.html">回到顶部</a>
+        </span>
+        </div>
+    </div>
 </body>
+<script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </html>
